@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>WallFace - Registro</title>
+</head>
+<body>
+	<!-- (h1)+(table>tr*8>td*2) -->
+
+	<h1>Registro gratis</h1>
+
+	<form action="/registerUser" method="post">
+		<table>
+			<tr>
+				<td>
+					<label for="userName">Nombre</label>
+				</td>
+				<td>
+					<input type="text" id="userName" name="userName" placeholder="Escribe tu usuario">
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<label for="userPass">Contrase&ntilde;a</label>
+				</td>
+				<td>
+					<input type="password" id="userPass" name="userPass">
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<label for="genderM">Género</label>
+				</td>
+				<td>
+					Mujer<input type="radio" id="genderM" name="gender" value="M">
+					Hombre<input type="radio" id="genderH" name="gender" value="H">
+					Otro<input type="radio" id="genderO" name="gender" value="O">
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<label for="country">País</label>
+				</td>
+				<td>
+					<select id="country" name="country">
+						<option value="">-- Selecciona tu país --</option>
+						<option value="es">España</option>
+						<option value="fr">Francia</option>
+						<option value="ja">Japón</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Tus aficiones
+				</td>
+				<td>
+					<input type="checkbox" id="hobby1" name="hobby1"> Cine<br>
+					<input type="checkbox" id="hobby2" name="hobby2"> Series<br>
+					<input type="checkbox" id="hobby3" name="hobby3"> Música<br>
+					<input type="checkbox" id="hobby4" name="hobby4"> Huevos de Fabergé
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<label for="comments">Comentarios</label>
+				</td>
+				<td>
+					<textarea id="comments" name="comments" placeholder="Escribe aquí"></textarea>
+				</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>
+					<input type="checkbox" id="accept" name="accept" value="ok" required>
+					(*) Acepto las condiciones patatín patatán
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					<input type="submit" value="Registrarme">
+				</td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>
