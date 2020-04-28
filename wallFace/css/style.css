@@ -1,4 +1,28 @@
 
+@keyframes growUpAndShrink {
+	25% {
+		font-size: 45px;
+	}
+	50% {
+		font-size: 90px;
+		color: red;
+	}
+	75% {
+		font-size: 135px;
+	}
+	100% {
+		font-size: initial;
+		color: initial;
+	}
+}
+
+.sports-title {
+	animation: growUpAndShrink 4s;
+	animation-timing-function: cubic-bezier(.24,1.14,.83,-0.27);
+	/*animation-iteration-count: infinite;*/
+	animation-delay: 2s;
+}
+
 /* ------------- GLOBAL STYLES -------------------- */
 
 /* Tag Selector */
@@ -20,6 +44,38 @@ article {
 #main-article {
 	border: 2px solid black;
 	background-color: crimson;
+	position: relative;
+	height: 300px;
+}
+
+#main-article h2 {
+	position: absolute;
+	top: 20px;
+	left: 10%;
+	width: 30%;
+}
+
+#main-article p {
+	position: absolute;
+	top: 20px;
+	right: 10%;
+	width: 30%;
+}
+
+.backtotop {
+	background-color: rgb(0, 0, 0);
+	color: #12a42b;
+	padding: 20px 2%;
+	text-decoration: none;
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	transition: background-color 1.8s, color 1.8s;
+}
+
+.backtotop:hover {
+	background-color: #12a42b;
+	color: rgb(0, 0, 0);
 }
 
 /* ------------- HEADER -------------------- */
