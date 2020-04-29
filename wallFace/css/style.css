@@ -84,7 +84,58 @@ article {
 
 /* ------------- NAV -------------------- */
 
-/* ... */
+nav ul {
+	margin: 0;
+	padding: 0;
+}
+
+nav ul li {
+	display: inline-block;
+	background-color: #b4a129;
+	width: 16.49%;
+	margin: 10px 2%;
+	padding: 10px 2%;
+	text-align: center;
+}
+
+nav ul li a {
+	text-decoration: none;
+	color: white;
+}
+
+/* ------------- HOME -------------------- */
+
+#home-container #rusia-history div:nth-child(2) {
+	column-count: 2;
+	column-gap: 100px;
+}
+
+#home-container #rusia-history article h3 {
+	margin-top: 0;
+	padding-top: 12px;
+}
+
+/* ------------- FRANCE -------------------- */
+
+#france-container .flex-row-grandpa {
+	display: flex;
+	justify-content: space-around;
+}
+#france-container .flex-row-grandpa > div {
+	background-color: red;
+	flex-grow: 1;
+}
+
+#france-container .flex-row-father {
+	display: flex;
+	flex-direction: column;
+}
+#france-container .flex-row-father > div {
+}
+
+/* ------------- SIGNUP -------------------- */
+
+/* #signup-container ... */
 
 /* ------------- FOOTER -------------------- */
 
