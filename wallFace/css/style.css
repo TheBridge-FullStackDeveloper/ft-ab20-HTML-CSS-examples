@@ -1,27 +1,6 @@
-
-@keyframes growUpAndShrink {
-	25% {
-		font-size: 45px;
-	}
-	50% {
-		font-size: 90px;
-		color: red;
-	}
-	75% {
-		font-size: 135px;
-	}
-	100% {
-		font-size: initial;
-		color: initial;
-	}
-}
-
-.sports-title {
-	animation: growUpAndShrink 4s;
-	animation-timing-function: cubic-bezier(.24,1.14,.83,-0.27);
-	/*animation-iteration-count: infinite;*/
-	animation-delay: 2s;
-}
+/* ------------------------------------------------- */
+/* --------- MOBILE & TABLET BREAKPOINTS ----------- */
+/* ------------------------------------------------- */
 
 /* ------------- GLOBAL STYLES -------------------- */
 
@@ -78,18 +57,46 @@ article {
 	color: rgb(0, 0, 0);
 }
 
+@keyframes growUpAndShrink {
+	25% {
+		font-size: 45px;
+	}
+	50% {
+		font-size: 90px;
+		color: red;
+	}
+	75% {
+		font-size: 135px;
+	}
+	100% {
+		font-size: initial;
+		color: initial;
+	}
+}
+
+.sports-title {
+	animation: growUpAndShrink 4s;
+	animation-timing-function: cubic-bezier(.24,1.14,.83,-0.27);
+	/*animation-iteration-count: infinite;*/
+	animation-delay: 2s;
+}
+
 /* ------------- HEADER -------------------- */
 
 /* ... */
 
 /* ------------- NAV -------------------- */
 
-nav ul {
+nav.desktop-menu {
+	display: none;
+}
+
+nav.desktop-menu ul {
 	margin: 0;
 	padding: 0;
 }
 
-nav ul li {
+nav.desktop-menu ul li {
 	display: inline-block;
 	background-color: #b4a129;
 	width: 16.49%;
@@ -98,7 +105,7 @@ nav ul li {
 	text-align: center;
 }
 
-nav ul li a {
+nav.desktop-menu ul li a {
 	text-decoration: none;
 	color: white;
 }
@@ -120,10 +127,14 @@ nav ul li a {
 #france-container .flex-row-grandpa {
 	display: flex;
 	justify-content: space-around;
+	flex-direction: column;
 }
 #france-container .flex-row-grandpa > div {
-	background-color: red;
 	flex-grow: 1;
+}
+
+.fluid-container img {
+	width: 100%;
 }
 
 #france-container .flex-row-father {
@@ -140,3 +151,34 @@ nav ul li a {
 /* ------------- FOOTER -------------------- */
 
 /* ... */
+
+/* ------------------------------------------------- */
+/* --------- LAPTOP BREAKPOINTS ---------- */
+/* ------------------------------------------------- */
+
+@media screen and (min-width: 1366px) {
+
+	.wrapper {
+		width: 1365px;
+		margin: 0 auto;
+	}
+
+	#france-container .flex-row-grandpa {
+		flex-direction: row;
+	}
+}
+
+/* ------------------------------------------------- */
+/* --------- DESKTOP BREAKPOINTS ---------- */
+/* ------------------------------------------------- */
+
+@media screen and (min-width: 1680px) {
+
+	nav.desktop-menu {
+		display: block;
+	}
+
+	nav.mobile-menu {
+		display: none;
+	}
+}
